@@ -1,0 +1,257 @@
+/* Main stylesheet for Chopin Banquet Calculator */
+:root {
+    --gap: 12px;
+    --primary-bg: #f6f7fb;
+    --card-bg: #fff;
+    --header-bg: #111;
+    --header-text: #fff;
+    --text-primary: #111;
+    --text-secondary: #444;
+    --text-muted: #666;
+    --border-color: #d7d9e0;
+    --border-light: #eee;
+    --shadow: 0 6px 18px rgba(0,0,0,.06);
+    --radius: 10px;
+    --radius-card: 14px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Arial, sans-serif;
+    margin: 0;
+    background: var(--primary-bg);
+    color: var(--text-primary);
+}
+
+header {
+    padding: 16px;
+    background: var(--header-bg);
+    color: var(--header-text);
+    box-shadow: var(--shadow);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 16px;
+    display: grid;
+    gap: var(--gap);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap);
+}
+
+@media (min-width: 900px) {
+    .grid {
+        grid-template-columns: 420px 1fr;
+    }
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: var(--radius-card);
+    padding: 14px;
+    box-shadow: var(--shadow);
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+label {
+    font-size: 12px;
+    color: var(--text-secondary);
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+input, select, textarea, button {
+    font: inherit;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    background: var(--card-bg);
+    color: var(--text-primary);
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #111;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+    min-height: 160px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 12px;
+    resize: vertical;
+}
+
+button {
+    padding: 10px 12px;
+    border: 0;
+    border-radius: var(--radius);
+    background: var(--header-bg);
+    color: var(--header-text);
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background: #333;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button.secondary {
+    background: #e9ebf3;
+    color: var(--text-primary);
+}
+
+button.secondary:hover {
+    background: #dfe1f0;
+}
+
+button.danger {
+    background: #b91c1c;
+}
+
+button.danger:hover {
+    background: #991b1b;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.muted {
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.pill {
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: var(--text-primary);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.pill.warning {
+    background: #fef3c7;
+}
+
+.pill.danger {
+    background: #fee2e2;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 10px 8px;
+    border-bottom: 1px solid var(--border-light);
+    vertical-align: top;
+}
+
+th {
+    font-size: 12px;
+    color: #555;
+    font-weight: 600;
+    background: #fafafa;
+}
+
+tbody tr:hover {
+    background: #f9f9f9;
+}
+
+.right {
+    text-align: right;
+}
+
+.two {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap);
+}
+
+@media (min-width: 900px) {
+    .two {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.small {
+    font-size: 12px;
+}
+
+tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: #f3f4f6;
+    font-size: 12px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--border-light);
+    margin: 14px 0;
+}
+
+.error {
+    color: #b91c1c;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.success {
+    color: #059669;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+@media print {
+    body {
+        background: white;
+    }
+    header {
+        box-shadow: none;
+    }
+    button, .muted {
+        display: none;
+    }
+    table {
+        page-break-inside: avoid;
+    }
+}
