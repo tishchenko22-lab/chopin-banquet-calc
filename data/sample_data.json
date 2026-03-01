@@ -1,0 +1,1 @@
+{"banquet":{"date":"2026-03-01","location":"Grand Ballroom","guests":[{"name":"John Doe","rsvp":true,"meal_choice":"Vegetarian"},{"name":"Jane Smith","rsvp":true,"meal_choice":"Chicken"}],"menu":{"appetizers":["Bruschetta","Stuffed Mushrooms"],"main_courses":["Grilled Salmon","Pasta Primavera","Beef Wellington"],"desserts":["Chocolate Mousse","Tiramisu"]}}}
