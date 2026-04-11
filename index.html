@@ -1,49 +1,173 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Калькулятор Бенкетів Шопена</title>
+    <title>Kitchen OS · Chopin Internal Roadmap</title>
     <link rel="stylesheet" href="styles/main.css">
-    <script>
-        function addToShoppingList(item) {
-            const list = document.getElementById('shopping-list');
-            const listItem = document.createElement('tr');
-            listItem.innerHTML = `<td>${item}</td>`;
-            list.appendChild(listItem);
-        }
-        function onSubmit() {
-            const input = document.getElementById('menu-item');
-            addToShoppingList(input.value);
-            input.value = '';
-        }
-    </script>
 </head>
 <body>
-    <header>
-        <h1>Калькулятор Бенкетів Шопена</h1>
+    <header class="topbar">
+        <div>
+            <p class="eyebrow">Chopin Operations System</p>
+            <h1>Kitchen OS Roadmap</h1>
+        </div>
+        <div class="topbar-meta">
+            <span class="pill success">Q2 Execution</span>
+            <span class="muted">Updated: 11 Apr 2026</span>
+        </div>
     </header>
-    <main>
-        <div class="grid-container">
-            <aside class="sidebar-left">
-                <h2>Меню</h2>
-                <input type="text" id="menu-item" placeholder="Додати еле��ент до меню">
-                <button onclick="onSubmit()">Добавити до списку покупок</button>
-            </aside>
-            <section class="content-right">
-                <h2>Список покупок</h2>
+
+    <main class="os-layout">
+        <aside class="card panel-left">
+            <h2>Operating Rhythm</h2>
+            <div class="metric-grid">
+                <article class="metric">
+                    <p class="metric-label">Projects On Track</p>
+                    <p class="metric-value">8 / 11</p>
+                    <p class="metric-note">+2 vs last week</p>
+                </article>
+                <article class="metric">
+                    <p class="metric-label">Critical Risks</p>
+                    <p class="metric-value">3</p>
+                    <p class="metric-note">2 need leadership unblock</p>
+                </article>
+                <article class="metric">
+                    <p class="metric-label">Prep Accuracy</p>
+                    <p class="metric-value">96.2%</p>
+                    <p class="metric-note">Target ≥ 95%</p>
+                </article>
+                <article class="metric">
+                    <p class="metric-label">Labor Efficiency</p>
+                    <p class="metric-value">87%</p>
+                    <p class="metric-note">+4% since March</p>
+                </article>
+            </div>
+
+            <hr>
+
+            <h3>This Week Cadence</h3>
+            <ul class="timeline-list">
+                <li><strong>Mon 09:00</strong><span>Line readiness + vendor ETA review</span></li>
+                <li><strong>Tue 15:00</strong><span>Menu engineering checkpoint</span></li>
+                <li><strong>Thu 11:30</strong><span>Cost variance deep-dive</span></li>
+                <li><strong>Fri 17:00</strong><span>Retro + next sprint commitments</span></li>
+            </ul>
+
+            <h3>Immediate Focus</h3>
+            <div class="focus-list">
+                <div class="focus-item">
+                    <span class="pill warning">Watch</span>
+                    <p>Freezer station throughput dropped below SLA at Downtown kitchen.</p>
+                </div>
+                <div class="focus-item">
+                    <span class="pill">Opportunity</span>
+                    <p>Automate purchase-order reconciliation to save 4 hrs/week.</p>
+                </div>
+                <div class="focus-item">
+                    <span class="pill danger">Blocker</span>
+                    <p>Combi oven replacement approval still pending Finance sign-off.</p>
+                </div>
+            </div>
+        </aside>
+
+        <section class="card panel-main">
+            <div class="section-head">
+                <div>
+                    <p class="eyebrow">Projects</p>
+                    <h2>Actionable Operations Portfolio</h2>
+                </div>
+                <div class="actions">
+                    <button>+ Add Project</button>
+                    <button class="secondary">Export Ops Brief</button>
+                </div>
+            </div>
+
+            <div class="table-wrap">
                 <table>
                     <thead>
                         <tr>
-                            <th>Назва елемента</th>
+                            <th>Project</th>
+                            <th>Owner</th>
+                            <th>Status</th>
+                            <th>Next Operational Action</th>
+                            <th>Due</th>
                         </tr>
                     </thead>
-                    <tbody id="shopping-list">
-                        <!-- Список буде заповнений тут -->
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Station Capacity Rebalance</strong>
+                                <p class="muted">Kitchen Network · Ops Excellence</p>
+                            </td>
+                            <td>Maria (Ops)</td>
+                            <td><span class="pill">On Track</span></td>
+                            <td>Publish revised prep matrix and train PM shift leads.</td>
+                            <td>Apr 15</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Yield Loss Prevention v2</strong>
+                                <p class="muted">Food Cost · Controls</p>
+                            </td>
+                            <td>Anton (Culinary)</td>
+                            <td><span class="pill warning">At Risk</span></td>
+                            <td>Close root-cause on fish trim variance; update cutting SOP.</td>
+                            <td>Apr 18</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Vendor SLA Automation</strong>
+                                <p class="muted">Supply Chain · Systems</p>
+                            </td>
+                            <td>Ivanna (Procurement)</td>
+                            <td><span class="pill">On Track</span></td>
+                            <td>Enable auto-escalation for late deliveries over 90 min.</td>
+                            <td>Apr 20</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Combi Oven Replacement</strong>
+                                <p class="muted">Infrastructure · Capex</p>
+                            </td>
+                            <td>Denys (Facilities)</td>
+                            <td><span class="pill danger">Blocked</span></td>
+                            <td>Secure CFO approval and confirm installation window.</td>
+                            <td>Apr 22</td>
+                        </tr>
                     </tbody>
                 </table>
-            </section>
-        </div>
+            </div>
+
+            <div class="two ops-columns">
+                <section>
+                    <h3>Operational Commitments (Next 72h)</h3>
+                    <ul class="checklist">
+                        <li><input type="checkbox" checked> Finalize high-volume prep playbook for weekend demand.</li>
+                        <li><input type="checkbox"> Lock labor plan against revised booking forecast.</li>
+                        <li><input type="checkbox"> Validate emergency supplier fallback for dairy.</li>
+                        <li><input type="checkbox"> Review QA audit misses with all shift supervisors.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Decision Queue</h3>
+                    <ul class="decision-list">
+                        <li>
+                            <strong>Approve capex for combi oven</strong>
+                            <p class="muted">Impact: restores 12% throughput at Downtown site.</p>
+                        </li>
+                        <li>
+                            <strong>Extend pilot for dynamic prep windows</strong>
+                            <p class="muted">Impact: expected 1.8% reduction in labor overrun.</p>
+                        </li>
+                        <li>
+                            <strong>Sign off on unified inventory taxonomy</strong>
+                            <p class="muted">Impact: cleaner reporting for all kitchen units.</p>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </section>
     </main>
 </body>
 </html>
